@@ -1,0 +1,86 @@
+.screen-one {
+  height: 100vh;
+  padding: 17.6% 10.3% 19.7%;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: 1200px) {
+    height: auto;
+    padding: 181px 25px 393px;
+  }
+  // .screen-one__container
+  &__container {
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+
+  &__snowflake {
+    position: absolute;
+    left: -180px;
+    bottom: 0;
+    width: 447px;
+    height: 448px;
+    transform: rotate(-10.802deg);
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__santa {
+    position: absolute;
+    right: -118px;
+    bottom: 0;
+
+    @media screen and (max-width: 1200px) {
+      right: unset;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    > img {
+      width: clamp(28.125rem, -144.063rem + 229.58vw, 62.563rem);
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 51px;
+    left: 166px;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+.santa {
+
+}
+
+.cloud {
+  position: absolute;
+  left: clamp(-5rem, -64.375rem + 79.17vw, 6.875rem);
+  top: clamp(4.5rem, -23.625rem + 37.5vw, 10.125rem);
+  
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  &__img {
+    filter: blur(2px);
+    width: 260px;
+    height: 166px;
+    transform: rotate(-0.145deg);
+  }
+
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-family: Risque, sans-serif;
+    font-size: 1.125rem;
+  }
+}

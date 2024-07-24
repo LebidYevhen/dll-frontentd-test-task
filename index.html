@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+  <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <link rel="stylesheet" href="assets/css/main.min.css">
+</head>
+<body>
+
+<svg class="stars" width="1330" height="624" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M533 294L534.123 297.455H537.755L534.816 299.59L535.939 303.045L533 300.91L530.061 303.045L531.184 299.59L528.245 297.455H531.877L533 294Z" fill="#FCF9BF"/>
+  <path d="M487.5 141L489.184 146.182H494.633L490.225 149.385L491.908 154.568L487.5 151.365L483.092 154.568L484.775 149.385L480.367 146.182H485.816L487.5 141Z" fill="#FCF9BF"/>
+  <path d="M435 227L436.123 230.455H439.755L436.816 232.59L437.939 236.045L435 233.91L432.061 236.045L433.184 232.59L430.245 230.455H433.877L435 227Z" fill="#FCF9BF"/>
+  <path d="M422.5 171L424.184 176.182H429.633L425.225 179.385L426.908 184.568L422.5 181.365L418.092 184.568L419.775 179.385L415.367 176.182H420.816L422.5 171Z" fill="#FCF9BF"/>
+  <path d="M755.5 222L757.184 227.182H762.633L758.225 230.385L759.908 235.568L755.5 232.365L751.092 235.568L752.775 230.385L748.367 227.182H753.816L755.5 222Z" fill="#FCF9BF"/>
+  <path d="M48.5 279L50.1839 284.182H55.6329L51.2245 287.385L52.9084 292.568L48.5 289.365L44.0916 292.568L45.7755 287.385L41.3671 284.182H46.8161L48.5 279Z" fill="#FCF9BF"/>
+  <path d="M318.5 115L320.184 120.182H325.633L321.225 123.385L322.908 128.568L318.5 125.365L314.092 128.568L315.775 123.385L311.367 120.182H316.816L318.5 115Z" fill="#FCF9BF"/>
+  <path d="M640 166L641.123 169.455H644.755L641.816 171.59L642.939 175.045L640 172.91L637.061 175.045L638.184 171.59L635.245 169.455H638.877L640 166Z" fill="#FCF9BF"/>
+  <path d="M410 362L411.123 365.455H414.755L411.816 367.59L412.939 371.045L410 368.91L407.061 371.045L408.184 367.59L405.245 365.455H408.877L410 362Z" fill="#FCF9BF"/>
+  <path d="M238 318L239.123 321.455H242.755L239.816 323.59L240.939 327.045L238 324.91L235.061 327.045L236.184 323.59L233.245 321.455H236.877L238 318Z" fill="#FCF9BF"/>
+  <path d="M98 469L99.1226 472.455H102.755L99.8164 474.59L100.939 478.045L98 475.91L95.0611 478.045L96.1836 474.59L93.2447 472.455H96.8774L98 469Z" fill="#FCF9BF"/>
+  <path d="M390 508L391.123 511.455H394.755L391.816 513.59L392.939 517.045L390 514.91L387.061 517.045L388.184 513.59L385.245 511.455H388.877L390 508Z" fill="#FCF9BF"/>
+  <path d="M275 438L276.123 441.455H279.755L276.816 443.59L277.939 447.045L275 444.91L272.061 447.045L273.184 443.59L270.245 441.455H273.877L275 438Z" fill="#FCF9BF"/>
+  <path d="M238 318L239.123 321.455H242.755L239.816 323.59L240.939 327.045L238 324.91L235.061 327.045L236.184 323.59L233.245 321.455H236.877L238 318Z" fill="#FCF9BF"/>
+  <path d="M1112 151L1113.12 154.455H1116.76L1113.82 156.59L1114.94 160.045L1112 157.91L1109.06 160.045L1110.18 156.59L1107.24 154.455H1110.88L1112 151Z" fill="#FCF9BF"/>
+  <path d="M321 289L322.123 292.455H325.755L322.816 294.59L323.939 298.045L321 295.91L318.061 298.045L319.184 294.59L316.245 292.455H319.877L321 289Z" fill="#FCF9BF"/>
+  <path d="M93 367L94.1226 370.455H97.7553L94.8164 372.59L95.9389 376.045L93 373.91L90.0611 376.045L91.1836 372.59L88.2447 370.455H91.8774L93 367Z" fill="#FCF9BF"/>
+  <path d="M209 542L210.123 545.455H213.755L210.816 547.59L211.939 551.045L209 548.91L206.061 551.045L207.184 547.59L204.245 545.455H207.877L209 542Z" fill="#FCF9BF"/>
+  <path d="M733 308L734.123 311.455H737.755L734.816 313.59L735.939 317.045L733 314.91L730.061 317.045L731.184 313.59L728.245 311.455H731.877L733 308Z" fill="#FCF9BF"/>
+  <path d="M670 479L671.123 482.455H674.755L671.816 484.59L672.939 488.045L670 485.91L667.061 488.045L668.184 484.59L665.245 482.455H668.877L670 479Z" fill="#FCF9BF"/>
+  <path d="M5 433L6.12257 436.455H9.75528L6.81636 438.59L7.93893 442.045L5 439.91L2.06107 442.045L3.18364 438.59L0.244718 436.455H3.87743L5 433Z" fill="#FCF9BF"/>
+  <path d="M53 614L54.1226 617.455H57.7553L54.8164 619.59L55.9389 623.045L53 620.91L50.0611 623.045L51.1836 619.59L48.2447 617.455H51.8774L53 614Z" fill="#FCF9BF"/>
+  <path d="M558 46L559.123 49.4549H562.755L559.816 51.5902L560.939 55.0451L558 52.9098L555.061 55.0451L556.184 51.5902L553.245 49.4549H556.877L558 46Z" fill="#FCF9BF"/>
+  <path d="M1325 390L1326.12 393.455H1329.76L1326.82 395.59L1327.94 399.045L1325 396.91L1322.06 399.045L1323.18 395.59L1320.24 393.455H1323.88L1325 390Z" fill="#FCF9BF"/>
+  <path d="M24 168L25.1226 171.455H28.7553L25.8164 173.59L26.9389 177.045L24 174.91L21.0611 177.045L22.1836 173.59L19.2447 171.455H22.8774L24 168Z" fill="#FCF9BF"/>
+  <path d="M180 196L181.123 199.455H184.755L181.816 201.59L182.939 205.045L180 202.91L177.061 205.045L178.184 201.59L175.245 199.455H178.877L180 196Z" fill="#FCF9BF"/>
+  <path d="M306 0L307.123 3.45492H310.755L307.816 5.59017L308.939 9.04508L306 6.90983L303.061 9.04508L304.184 5.59017L301.245 3.45492H304.877L306 0Z" fill="#FCF9BF"/>
+  <path d="M427 55L428.123 58.4549H431.755L428.816 60.5902L429.939 64.0451L427 61.9098L424.061 64.0451L425.184 60.5902L422.245 58.4549H425.877L427 55Z" fill="#FCF9BF"/>
+</svg>
+
+<svg class="snow" width="1089" height="581" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="206" cy="-50" r="5" fill="white"/>
+  <circle cx="440" cy="-50" r="5" fill="white"/>
+  <circle cx="658" cy="-50" r="5" fill="white"/>
+  <circle cx="523" cy="-50" r="5" fill="white"/>
+  <circle cx="1001" cy="-50" r="5" fill="white"/>
+  <circle cx="1084" cy="-50" r="5" fill="white"/>
+  <circle cx="829" cy="-50" r="5" fill="white"/>
+  <circle cx="38" cy="-50" r="5" fill="white"/>
+  <circle cx="272" cy="-50" r="5" fill="white"/>
+  <circle cx="490" cy="-50" r="5" fill="white"/>
+  <circle cx="355" cy="-50" r="5" fill="white"/>
+  <circle cx="833" cy="-50" r="5" fill="white"/>
+  <circle cx="916" cy="-50" r="5" fill="white"/>
+  <circle cx="661" cy="-50" r="5" fill="white"/>
+  <circle cx="500" cy="-50" r="5" fill="white"/>
+  <circle cx="100" cy="-50" r="5" fill="white"/>
+  <circle cx="668" cy="-50" r="5" fill="white"/>
+  <circle cx="268" cy="-50" r="5" fill="white"/>
+  <circle cx="107" cy="-50" r="5" fill="white"/>
+</svg>
+
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <a href="#">
+        <img src="assets/img/Coca-Cola_logo_white-1.png" alt="Logo">
+      </a>
+    </div>
+    <div class="header__navigation">
+      <nav class="header__menu menu">
+        <ul class="menu__body">
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">
+              <span class="menu-link__text">Main</span>
+              <span class="menu-link__hover">Main</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">
+              <span class="menu-link__text">About</span>
+              <span class="menu-link__hover">About</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">
+              <span class="menu-link__text">Products</span>
+              <span class="menu-link__hover">Products</span>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">
+              <span class="menu-link__text">Contacts</span>
+              <span class="menu-link__hover">Contacts</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header__menu menu-burger">
+        <ul class="menu__body">
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">Main</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">About</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">Products</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu-link">Contacts</a>
+          </li>
+        </ul>
+        <div class="menu-icon__wrapper">
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+      <div class="menu-icon__wrapper">
+        <div class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="screen-one__wrapper swiper-slide">
+      <section class="screen-one">
+        <div class="screen-one__container">
+          <h1 class="title">Main Site Title</h1>
+          <p class="description">Lorem ipsum descripsum</p>
+          <button class="cta">Call to action</button>
+        </div>
+        <img src="assets/img/snowflake.png" alt="Snowflake" class="screen-one__snowflake animate-spin">
+        <div class="screen-one__santa">
+          <img src="assets/img/dedcoca-2.png" alt="Santa with coca cola" class="santa">
+          <div class="cloud" x-data="{ show: false }" x-init="setTimeout(() => show = true, 3000)" x-show="show"
+               x-transition>
+            <img src="assets/img/Cloud.png" alt="Cloud" class="cloud__img">
+            <p class="cloud__text">
+              How how how !!!<br>
+              Like it?<br>
+              Scroll down for more !
+            </p>
+          </div>
+        </div>
+
+        <svg class="screen-one__arrow animate-top-to-bottom" xmlns="http://www.w3.org/2000/svg" width="38" height="37"
+             viewBox="0 0 38 37" fill="none">
+          <path
+              d="M17.3153 35.7709C18.2939 36.7449 19.8768 36.7412 20.8508 35.7627L36.7237 19.8159C37.6978 18.8373 37.6941 17.2544 36.7155 16.2803C35.7369 15.3063 34.154 15.31 33.18 16.2885L19.0707 30.4635L4.8958 16.3542C3.91722 15.3802 2.33431 15.3838 1.36027 16.3624C0.38623 17.341 0.389905 18.9239 1.36848 19.8979L17.3153 35.7709ZM16.5 0.00580414L16.5789 34.0048L21.5789 33.9932L21.5 -0.00580414L16.5 0.00580414Z"
+              fill="white"/>
+        </svg>
+      </section>
+    </div>
+
+    <div class="screen-two-wrapper swiper-slide">
+      <section class="screen-two">
+        <div class="screen-two__container" x-data="{ open: 'sock' }">
+          <div class="choose-present">
+            <h2 class="title">At least somewhere you can feel new year atmosphere</h2>
+            <p class="description">Choose your present:</p>
+            <div class="gifts">
+              <a href="#" class="gifts__item" :class="open === 'sock' ? 'gifts__item--active' : ''"
+                 @click.prevent="open = 'sock'">
+                <img src="assets/img/new-year-sock-1.png" alt="Sock">
+              </a>
+              <a href="#" class="gifts__item" :class="open === 'cap' ? 'gifts__item--active' : ''"
+                 @click.prevent="open = 'cap'">
+                <img src="assets/img/caps-2-1.png" alt="Cap">
+              </a>
+              <a href="#" class="gifts__item" :class="open === 'bag' ? 'gifts__item--active' : ''"
+                 @click.prevent="open = 'bag'">
+                <img src="assets/img/new-year-bag-1.png" alt="Bag">
+              </a>
+            </div>
+          </div>
+          <div class="present-items">
+            <div class="present-item" x-cloak x-show="open === 'sock'" x-transition>
+              <div class="present-item__content">
+                <h3 class="title present-item__title">Best sock ever</h3>
+                <p class="present-item__description">
+                  Reuglar sock have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+                  industry. Lorem
+                </p>
+              </div>
+              <img src="assets/img/new-year-sock-2.png" alt="New Year Sock">
+            </div>
+
+            <div class="present-item" x-cloak :class="open === 'sock' ? 'present-item--active' : ''"
+                 x-show="open === 'cap'"
+                 x-transition>
+              <div class="present-item__content">
+                <h3 class="title present-item__title">Best cap ever</h3>
+                <p class="present-item__description">
+                  Reuglar cap have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+                  industry. Lorem
+                </p>
+              </div>
+              <img src="assets/img/new-year-sock-2.png" alt="New Year Sock">
+            </div>
+
+            <div class="present-item" x-cloak :class="open === 'sock' ? 'present-item--active' : ''"
+                 x-show="open === 'bag'"
+                 x-transition>
+              <div class="present-item__content">
+                <h3 class="title present-item__title">Best bag ever</h3>
+                <p class="present-item__description">
+                  Reuglar bag have no present inside Lorem Ipsum is simply dumm y text of the printing and types etting
+                  industry. Lorem
+                </p>
+              </div>
+              <img src="assets/img/new-year-sock-2.png" alt="New Year Sock">
+            </div>
+          </div>
+        </div>
+        <img src="assets/img/snowflake.png" alt="Snowflake" class="screen-two__snowflake animate-spin">
+      </section>
+    </div>
+
+    <div class="screen-three-wrapper swiper-slide">
+      <section class="screen-three">
+        <div class="screen-three__container">
+          <h2 class="title">
+            Write us <br>
+            for real presents
+          </h2>
+          <form>
+            <div class="form-group">
+              <label>
+                <input type="text" name="name" placeholder="Name" class="w-50">
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" name="phone" placeholder="Phone" class="w-50">
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <select name="gender" class="gender w-50">
+                  <option></option>
+                  <option value="boy">Boy</option>
+                  <option value="girl">Girl</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="email" placeholder="Email" class="w-50">
+              </label>
+            </div>
+            <div class="form-group full-width">
+              <label>
+                <textarea name="your-wish" placeholder="Your wish" class="w-100"></textarea>
+              </label>
+            </div>
+            <div class="form-group full-width">
+              <label class="checkbox">
+                <input type="checkbox">
+                Want Coca-cola with present?
+              </label>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+    mousewheel: {
+      invert: false,
+    },
+    effect: "fade",
+    allowTouchMove: false,
+    on: {
+      resize: function () {
+        updateSwiper(this);
+      },
+      init: function () {
+        updateSwiper(this);
+      },
+    },
+  });
+
+  function updateSwiper(swiper) {
+    if (window.innerWidth <= 1200) {
+      swiper.disable();
+      swiper.wrapperEl.classList.add('swiper-wrapper--mobile');
+    } else {
+      swiper.enable();
+      swiper.wrapperEl.classList.remove('swiper-wrapper--mobile')
+    }
+  }
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
